@@ -24,7 +24,7 @@ struct HomePlayView: View {
     var body: some View {
         
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .center), content: {
-            BlurViewRepresentable(style: .light)
+            //BlurViewRepresentable(style: .light)
             
             HStack(alignment: .center, spacing: 0, content: {
                 
@@ -62,7 +62,7 @@ struct HomePlayView: View {
             .padding(EdgeInsets(leading: Layout.viewLeading, trailing: 0))
         })
         .frame(width: UIScreen.main.bounds.size.width, height: Layout.homePlayHeight)
-        
+        .background(.ultraThinMaterial)
     }
 }
 
@@ -71,7 +71,8 @@ struct HomePlayView: View {
         List {
             ForEach(0..<15) { index in
                 Text("\(index)")
-                    .frame(height: 50)
+                    .frame(width: 200, height: 50)
+                    .background(Color.orange)
             }
         }
     }
